@@ -624,6 +624,9 @@ func runTable(method string, database *Database, table *Table, dataId string, pa
 			gosqlcrud.SqlSafe(&columns)
 
 			q := fmt.Sprintf(`SELECT %s FROM %s WHERE 1=1 %s %s %s`, columns, table.Name, where, orderbyClause, limitClause)
+
+			fmt.Println(q)
+
 			data, err := gosqlcrud.QueryToMaps(db, q, values...)
 			if err != nil {
 				return nil, err
