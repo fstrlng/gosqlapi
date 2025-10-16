@@ -1,4 +1,4 @@
-module github.com/elgs/gosqlapi
+module github.com/fstrlng/gosqlapi
 
 go 1.25
 
